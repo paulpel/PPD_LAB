@@ -12,8 +12,11 @@ class Backpack:
         self.list_of_values = self.settings.list_of_values
         self.list_of_volumes = self.settings.list_of_volumes
 
-    # zwraca największą wartość możliwą do uzyskania bez powtarzania elementów
+    #zwraca największą wartość możliwą do uzyskania bez powtarzania elementów
     def knapSack(self):
+        '''sprawdzamy dwie możliwości każdego elementu - albo wkładamy, albo nie.
+        Następnie sprawdzamy czy sumna wag elementów nie jest większa od pojemności plecaka,
+        oraz czy zysk przy włożeniu danego elementu jest większy niż przy nie włożeniu'''
         n = len(self.list_of_values)
         table = [[0 for x in range(self.capacity + 1)] for x in range(n + 1)]
 
@@ -30,6 +33,7 @@ class Backpack:
 
     # zwraca największą wartość możliwą do uzyskania z powtarzaniem elementów
     def unboundedKnapsack(self):
+        '''Działa podobnie jak wcześniej, lecz teraz każdy element ma nieskończoną ilość'''
         n = len(self.list_of_values)
         table = [0 for i in range(self.capacity + 1)]
 
