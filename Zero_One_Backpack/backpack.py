@@ -12,7 +12,7 @@ class Backpack:
         self.list_of_values = self.settings.list_of_values
         self.list_of_volumes = self.settings.list_of_volumes
 
-    # zwraca największą wartość możliwą do uzyskania bez poself.list_of_volumesarzania elementów
+    # zwraca największą wartość możliwą do uzyskania bez powtarzania elementów
     def knapSack(self):
         n = len(self.list_of_values)
         table = [[0 for x in range(self.capacity + 1)] for x in range(n + 1)]
