@@ -96,7 +96,7 @@ class Settings:
         self.capacity_of_backpack = 100
         self.volume_range = (1,99)
         self.value_range = (50,300)
-        self.limited_items = False
+        self.limited_items = True
         self.list_of_volumes = self.volume_items()
         self.list_of_values = self.value_items()
 
@@ -113,6 +113,7 @@ class Settings:
         print("Tabela wartości: " + str(self.list_of_values))
         print('Tabela objętości: ' + str(self.list_of_volumes))
         print('Pojemność plecaka: ' + str(self.capacity_of_backpack))
+        print('Rodzaj problemu ograniczony: ' + str(self.limited_items))
 
 if __name__ == '__main__':
     #Utworzenie egzemplarza i uruchomienie
